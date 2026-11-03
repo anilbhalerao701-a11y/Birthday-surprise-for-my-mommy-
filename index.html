@@ -1,1 +1,54 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Yuno 💜</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;
+ display:flex;align-items:center;justify-content:center;
+ padding:24px;
+ font-family:Georgia,serif;
+ color:white;text-align:center;
+ background:linear-gradient(135deg,#160b30,#512477,#a45cae);
+}
+.card{
+ max-width:480px;width:100%;
+ padding:38px 25px;
+ border:1px solid #ffffff55;
+ border-radius:25px;
+ background:#ffffff16;
+ box-shadow:0 15px 50px #0005;
+}
+h1{font-size:35px;color:#ffd6ff}
+.heart{font-size:48px;animation:pulse 1.5s infinite}
+p{font-size:18px;line-height:1.8}
+button{
+ background:#f2c5ff;color:#411653;
+ border:0;border-radius:30px;
+ padding:14px 25px;font-size:17px;
+ font-weight:bold;cursor:pointer;
+}
+#message{display:none;margin-top:25px}
+@keyframes pulse{50%{transform:scale(1.15)}}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="heart">💜</div>
+<h1>Happy Birthday, Yuno!</h1>
+<p>Today is your special day, and I have a little surprise for you. 🎂</p>
+<button onclick="document.getElementById('message').style.display='block';this.style.display='none'">Open Your Surprise 💌</button>
+<div id="message">
+<p>Heyy! I know you're so happy today, and I was so excited for your birthday too.</p>
+<p>Wishing you a very, very happy birthday! I hope you always stay happy and that all your dreams come true.</p>
+<p>I'm sorry for the times I made you sad, angry or uncomfortable. I never wanted to hurt you.</p>
+<p>Just be my friend. 💝</p>
+<p>Love from me ❣️<br><strong>I LOVE YOU 💞🎀♥️💌</strong></p>
+</div>
+<p style="color:#f7d7ff">Made with love 💜</p>
+</div>
+</body>
+</html>
