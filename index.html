@@ -4,51 +4,271 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Yuno 💜</title>
+
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;min-height:100vh;
- display:flex;align-items:center;justify-content:center;
- padding:24px;
- font-family:Georgia,serif;
- color:white;text-align:center;
- background:linear-gradient(135deg,#160b30,#512477,#a45cae);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.card{
- max-width:480px;width:100%;
- padding:38px 25px;
- border:1px solid #ffffff55;
- border-radius:25px;
- background:#ffffff16;
- box-shadow:0 15px 50px #0005;
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Georgia, serif;
+  color: white;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #16052e,
+    #542078,
+    #a34caa,
+    #291044
+  );
+  background-size: 300% 300%;
+  animation: backgroundMove 12s ease infinite;
 }
-h1{font-size:35px;color:#ffd6ff}
-.heart{font-size:48px;animation:pulse 1.5s infinite}
-p{font-size:18px;line-height:1.8}
-button{
- background:#f2c5ff;color:#411653;
- border:0;border-radius:30px;
- padding:14px 25px;font-size:17px;
- font-weight:bold;cursor:pointer;
+
+@keyframes backgroundMove {
+  0%,100% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
 }
-#message{display:none;margin-top:25px}
-@keyframes pulse{50%{transform:scale(1.15)}}
+
+.container {
+  width: 90%;
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px 20px;
+  border: 1px solid #f8c8ff;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.10);
+  box-shadow: 0 0 35px #e6a4ff66;
+  backdrop-filter: blur(10px);
+  animation: appear 2s ease;
+}
+
+@keyframes appear {
+  from {opacity: 0; transform: translateY(35px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+  font-size: 35px;
+  color: #ffd5ff;
+  text-shadow: 0 0 15px #ff9cff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {text-shadow: 0 0 8px #ffb4ff;}
+  to {text-shadow: 0 0 25px #fff, 0 0 35px #ff79ed;}
+}
+
+.subtitle {
+  margin: 20px 0;
+  font-size: 18px;
+  color: #ffe5ff;
+}
+
+.cake {
+  font-size: 85px;
+  margin: 20px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  50% {transform: translateY(-12px);}
+}
+
+button {
+  padding: 14px 25px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg,#e69bff,#ffb7e8);
+  color: #42134e;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ffb7ff;
+  margin: 12px;
+}
+
+button:active {
+  transform: scale(.95);
+}
+
+.letter {
+  display: none;
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(28, 8, 48, .65);
+  border: 1px solid #f5c4ff;
+  text-align: left;
+  line-height: 1.9;
+  font-size: 16px;
+  animation: appear 1.5s ease;
+}
+
+.letter h2 {
+  color: #ffc9ff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.letter p {
+  margin-bottom: 15px;
+}
+
+.signature {
+  color: #ffbdf1;
+  text-align: center;
+  font-size: 19px;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatUp 8s linear infinite;
+  z-index: 2;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.star {
+  position: fixed;
+  color: #fff4bd;
+  pointer-events: none;
+  animation: sparkle 2s infinite alternate;
+}
+
+@keyframes sparkle {
+  from {opacity: .2; transform: scale(.7);}
+  to {opacity: 1; transform: scale(1.4);}
+}
+
+footer {
+  margin-top: 25px;
+  color: #fbdcff;
+  font-size: 13px;
+}
+
 </style>
 </head>
+
 <body>
-<div class="card">
-<div class="heart">💜</div>
-<h1>Happy Birthday, Yuno!</h1>
-<p>Today is your special day, and I have a little surprise for you. 🎂</p>
-<button onclick="document.getElementById('message').style.display='block';this.style.display='none'">Open Your Surprise 💌</button>
-<div id="message">
-<p>Heyy! I know you're so happy today, and I was so excited for your birthday too.</p>
-<p>Wishing you a very, very happy birthday! I hope you always stay happy and that all your dreams come true.</p>
-<p>I'm sorry for the times I made you sad, angry or uncomfortable. I never wanted to hurt you.</p>
-<p>Just be my friend. 💝</p>
-<p>Love from me ❣️<br><strong>I LOVE YOU 💞🎀♥️💌</strong></p>
+
+<div class="container">
+
+  <h1>Happy Birthday Yuno! 💜</h1>
+
+  <p class="subtitle">
+    A little surprise made just for you ✨
+  </p>
+
+  <div class="cake">🎂</div>
+
+  <p>
+    Today is your special day!<br>
+    I hope your day is full of happiness 💗
+  </p>
+
+  <button onclick="openSurprise()">
+    Open Your Surprise 💌
+  </button>
+
+  <div class="letter" id="letter">
+
+    <h2>Dear Yuno 💜</h2>
+
+    <p>
+      Heyy! 💗 I know you're so happy for today,
+      and I was so excited for your birthday.
+      And it's here! Wishing you a very, very
+      happy birthday!
+    </p>
+
+    <p>
+      Be happy, beautiful and hot baddie 😁
+      I want to be there, but it's okay.
+    </p>
+
+    <p>
+      I know it's not perfect, but I'm sorry
+      for making you sad, angry and uncomfortable.
+      I didn't want to make something like that,
+      so I'm really sorry about that.
+    </p>
+
+    <p>
+      And just be my friend 💝
+      Um, enjoy your birthday and enjoy your life!
+    </p>
+
+    <p class="signature">
+      Love from me ❣️<br>
+      I LOVE YOU 💞🎀♥️💌
+    </p>
+
+  </div>
+
+  <footer>
+    Made with 💜 just for Yuno
+  </footer>
+
 </div>
-<p style="color:#f7d7ff">Made with love 💜</p>
-</div>
+
+<audio id="music" loop>
+  <source src="birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+function openSurprise() {
+  document.getElementById("letter").style.display = "block";
+
+  const music = document.getElementById("music");
+  music.play().catch(() => {
+    alert("Tap again to play the birthday music 🎵");
+  });
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = ["💜","💗","💖","💕","✨"][Math.floor(Math.random()*5)];
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (15 + Math.random()*20) + "px";
+  heart.style.animationDuration = (5 + Math.random()*5) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(), 10000);
+}
+
+function createStar() {
+  const star = document.createElement("div");
+  star.className = "star";
+  star.innerHTML = "✦";
+  star.style.left = Math.random()*100 + "vw";
+  star.style.top = Math.random()*100 + "vh";
+  star.style.fontSize = (10 + Math.random()*15) + "px";
+
+  document.body.appendChild(star);
+
+  setTimeout(() => star.remove(), 3000);
+}
+
+setInterval(createHeart, 500);
+setInterval(createStar, 400);
+
+</script>
+
 </body>
-</html
+</html>
